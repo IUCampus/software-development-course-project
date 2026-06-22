@@ -13,7 +13,7 @@ import React, { useState, useEffect } from 'react';
 import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } from '@mui/material';
 import axios from 'axios';
 
-// Conceptual React Component for displaying movies
+## Conceptual React Component for displaying movies
 export default function MovieCatalog() {
   const [movies, setMovies] = useState([]);
 
