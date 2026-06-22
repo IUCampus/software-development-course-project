@@ -14,7 +14,8 @@ import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } fro
 import axios from 'axios';
 
 ## Conceptual React Component for displaying movies
-<img width="1017" height="827" alt="image" src="https://github.com/user-attachments/assets/f39c764b-6786-436f-993a-ed81dfb4ec4e" />
+<img width="1028" height="838" alt="image" src="https://github.com/user-attachments/assets/55f84d3e-60ca-48e5-a039-ff184e0a7ea5" />
+
 
 
 ### Testing & Documentation Strategy
