@@ -6,7 +6,7 @@ The application is divided into a frontend single-page application (SPA) and a b
 ### Software Architecture (C4 Model - Container Level)
 To satisfy the architecture design requirement, here is a textual representation of the C4 Container Model:[Container] Web Application (React + Material UI): Delivers the UI to the user's browser.Communicates with: API Gateway via HTTPS/REST.[Container] API Gateway (Spring Cloud Gateway): Routes incoming frontend requests to the appropriate microservice.  [Container] Microservices Cluster (Spring Boot Java): Each service is independently deployed.  User Service -> Reads/Writes to User DB (PostgreSQL).  Movie Service -> Reads/Writes to Movie DB (PostgreSQL).  Booking Service -> Reads/Writes to Booking DB (PostgreSQL). Publishes to Kafka.  Payment Service -> Communicates with external Stripe API. Publishes to Kafka.  [Container] Message Broker (Apache Kafka): Handles async events.  [Container] Observability Stack: ELK (Elasticsearch, Logstash, Kibana) for centralized logging and Micrometer for telemetry.  
 
-### 3. Implementation & Technology StackBackend Technologies:
+###  Implementation & Technology StackBackend Technologies:
 The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.  Frontend Implementation (React + Material UI):The frontend will consume the REST APIs exposed by the Spring Cloud Gateway. Below is a conceptual implementation of how the Movie Service and Booking Service data would be rendered using React and Material UI.
 
 import React, { useState, useEffect } from 'react';
@@ -54,7 +54,7 @@ export default function MovieCatalog() {
   );
 }
 
-### 4. Testing & Documentation Strategy
+### Testing & Documentation Strategy
 To meet the application requirements from your task brief:
 
 Unit Testing:
@@ -71,6 +71,6 @@ API Level: Integrate Swagger/OpenAPI via springdoc-openapi to automatically gene
 
 Code Level: Use standard JavaDoc for backend logic and JSDoc for complex React hooks and utilities.
 
-### 5. Critical EvaluationHas the goal been achieved?
+### Critical EvaluationHas the goal been achieved?
 Yes. By decentralizing the monolithic structure into independent microservices (User, Movie, Booking, Payment) , the system can now scale specific components (like the Booking service) during peak times (e.g., a major movie release) without crashing the entire platform. The use of Kafka ensures that processes like email notifications don't block the user's booking flow.  Improvements for the future:Caching: Implement Redis for caching frequently accessed data like the daily movie catalog or available showtimes to reduce the load on the SQL database.Saga Pattern: For distributed transactions (e.g., ensuring a seat is released if the Payment Service fails), implementing the Saga pattern with compensating transactions would make the system more resilient.Frontend State Management: As the React app grows, introducing Redux Toolkit or Zustand will help manage complex global states (like the user's cart and authentication tokens) more cleanly than standard React Context.Accumulated experience and personal development:
 Designing this architecture highlights the complexity of distributed systems. It shifts the developmental mindset from writing straightforward CRUD applications to managing network latency, data consistency across different databases , and orchestrating containerized deployments via Kubernetes. It also underscores the importance of observability tools (ELK, Micrometer)  because debugging across five separate services is significantly harder than debugging a monolith
