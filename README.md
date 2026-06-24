@@ -57,5 +57,59 @@ This is the most complex service. It handles seat selection, saves the booking t
 <img width="792" height="475" alt="image" src="https://github.com/user-attachments/assets/1e5b69ec-ff36-4225-b1d7-e17a73294763" />
 
 
+C4Container
+    title C4 Container Model: Movie Booking Microservices Architecture
+
+    Person(user, "User / Admin", "Browses movies, selects seats, and books tickets. Admins manage the catalog.")
+
+    System_Boundary(movie_booking_system, "Movie Booking Platform") {
+        Container(frontend, "Frontend SPA", "React, Material UI", "Provides the user interface for browsing and booking.")
+        Container(api_gateway, "API Gateway", "Spring Cloud Gateway", "Single entry point; routes requests to the appropriate backend microservice.")
+        
+        Container(user_service, "User Service", "Spring Boot", "Handles user authentication, profile management, and access roles.")
+        ContainerDb(user_db, "User DB", "RDB SQL (AWS RDS)", "Stores user accounts and roles.")
+        
+        Container(movie_service, "Movie Service", "Spring Boot", "Manages movie details, genres, ratings, and showtimes.")
+        ContainerDb(movie_db, "Movie DB", "RDB SQL (AWS RDS)", "Stores the movie catalog and schedules.")
+        
+        Container(booking_service, "Booking Service", "Spring Boot", "Handles real-time seat selection, ticket booking, and reservations.")
+        ContainerDb(booking_db, "Booking DB", "RDB SQL (AWS RDS)", "Stores reservations and seat locks.")
+        
+        Container(payment_service, "Payment Service", "Spring Boot", "Processes payment transactions.")
+        
+        Container(review_service, "Review & Rating Service", "Spring Boot", "Allows users to rate and review movies after watching.")
+        ContainerDb(review_db, "Review DB", "RDB SQL (AWS RDS)", "Stores post-movie user feedback.")
+
+        ContainerQueue(kafka, "Message Broker", "Apache Kafka", "Event-driven communication for async tasks (e.g., notifications).")
+    }
+
+    System_Ext(payment_gateway, "Third-Party Payment Gateway", "Stripe, PayPal", "External service processing financial transactions.")
+    System_Ext(notification_service, "External Notifications", "Email/SMS", "Sends booking confirmations and promotions.")
+
+    %% User to Frontend to Gateway
+    Rel(user, frontend, "Interacts with UI")
+    Rel(frontend, api_gateway, "Makes REST API requests to")
+
+    %% Gateway to Microservices
+    Rel(api_gateway, user_service, "Routes /users traffic to")
+    Rel(api_gateway, movie_service, "Routes /movies traffic to")
+    Rel(api_gateway, booking_service, "Routes /bookings traffic to")
+    Rel(api_gateway, payment_service, "Routes /payments traffic to")
+    Rel(api_gateway, review_service, "Routes /reviews traffic to")
+
+    %% Microservices to Databases (RDB SQL)
+    Rel(user_service, user_db, "Reads/Writes user data")
+    Rel(movie_service, movie_db, "Reads/Writes movie data")
+    Rel(booking_service, booking_db, "Reads/Writes booking data")
+    Rel(review_service, review_db, "Reads/Writes review data")
+
+    %% Kafka Interactions
+    Rel(booking_service, kafka, "Publishes booking events to")
+    Rel(kafka, notification_service, "Triggers notifications after booking")
+
+    %% External Interactions
+    Rel(payment_service, payment_gateway, "Integrates with to process payments")
+
+
 
 
