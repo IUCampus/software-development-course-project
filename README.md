@@ -4,87 +4,67 @@ Many movie theaters struggle with outdated systems that fail during peak traffic
 The application is divided into a frontend single-page application (SPA) and a backend microservices cluster.  Frontend Web Application: Developed using React and Material UI (MUI). It serves as the primary touchpoint for users to browse movies, select seats, and manage bookings.API Gateway (Spring Cloud Gateway): Acts as the single entry point for the frontend to communicate with the backend services. It handles routing, CORS, and preliminary authentication checks.  User Service: Manages authentication (JWT), user profiles, and roles (admin/customer).  Movie Service: Manages the catalog of movies, showtimes, ratings, genres, and descriptions.  Booking Service: The core transactional service handling real-time seat locking, ticket generation, and reservation confirmations.  Payment Service: Integrates with third-party gateways (e.g., Stripe) to process secure transactions.  Review & Rating Service: Collects post-movie user feedback.  Message Broker (Apache Kafka): Facilitates asynchronous, event-driven communication between services (e.g., the Booking Service emitting a BookingConfirmed event that triggers the Notification Service via Kafka).  Wireframe Concept (Textual Description):View 1: Dashboard/Home: A Material UI grid displaying movie posters (cards) with titles, genres, and "Book Now" buttons.View 2: Movie Details & Showtime: A detailed view showing the synopsis and a date/time selector for available shows.View 3: Seat Selection: An interactive grid of seats (colored green for available, gray for booked, yellow for selected).View 4: Checkout: A summary of the booking with a secure payment form.
 
 ### Software Architecture (C4 Model - Container Level)
+<img width="1298" height="771" alt="image" src="https://github.com/user-attachments/assets/af024ca0-0986-41c8-9bcd-1f9225967eae" />
+
 Textual representation of the C4 Container Model:
 [Container] Web Application (React + Material UI): Delivers the UI to the user's browser.Communicates with: API Gateway via HTTPS/REST.[Container] API Gateway (Spring Cloud Gateway): Routes incoming frontend requests to the appropriate microservice.  
 [Container] Microservices Cluster (Spring Boot Java): Each service is independently deployed.  User Service -> Reads/Writes to User DB (PostgreSQL).  Movie Service -> Reads/Writes to Movie DB (PostgreSQL).  Booking Service -> Reads/Writes to Booking DB (PostgreSQL). Publishes to Kafka.  Payment Service -> Communicates with external Stripe API. Publishes to Kafka. 
 [Container] Message Broker (Apache Kafka): Handles async events.  
-[Container] Observability Stack: ELK (Elasticsearch, Logstash, Kibana) for centralized logging and Micrometer for telemetry.  
+[Container] Observability Stack: ELK (Elasticsearch, Logstash, Kibana) for centralized logging and Micrometer for telemetry. 
 
-<img width="1326" height="763" alt="image" src="https://github.com/user-attachments/assets/bde82ba9-59ed-436f-a783-cb84ec40ad87" />
+C4Container
+    title C4 Container Model: Movie Booking Microservices Architecture
 
+    Person(user, "User / Admin", "Browses movies, selects seats, and books tickets. Admins manage the catalog.")
 
-
-### Level 1: System Context Diagram
-C4Context
-    title System Context Diagram for Movie Booking System
-
-    Person(customer, "Movie Goer", "A customer who wants to browse movies, select seats, and book tickets.")
-    Person(admin, "Theater Admin", "An administrator who manages movie catalogs and showtimes.")
-
-    System(booking_system, "Movie Booking System", "Allows users to search for movies, view availability, book seats, and leave reviews.")
-
-    System_Ext(payment_gateway, "Payment Gateway", "External system (e.g., Stripe, PayPal) that processes credit card payments securely.")
-    System_Ext(notification_system, "Email/SMS Service", "External service (e.g., AWS SES, Twilio) for sending booking confirmations.")
-
-    Rel(customer, booking_system, "Views movies, books tickets, and leaves reviews using")
-    Rel(admin, booking_system, "Manages movies and schedules using")
-    
-    Rel(booking_system, payment_gateway, "Forwards payment details for processing to")
-    Rel(booking_system, notification_system, "Triggers confirmation messages via")
-
- ### Level 2: Container Diagram (The Microservices)
- C4Container
-    title Container Diagram for Movie Booking Microservices
-
-    Person(customer, "Movie Goer", "A customer booking tickets.")
-
-    System_Boundary(c1, "Movie Booking System") {
-        Container(web_app, "Web Application", "React, Material UI", "Delivers the user interface to the customer's browser.")
-        Container(api_gateway, "API Gateway", "Spring Cloud Gateway", "Single entry point that routes requests to the correct microservice.")
+    System_Boundary(movie_booking_system, "Movie Booking Platform") {
+        Container(frontend, "Frontend SPA", "React, Material UI", "Provides the user interface for browsing and booking.")
+        Container(api_gateway, "API Gateway", "Spring Cloud Gateway", "Single entry point; routes requests to the appropriate backend microservice.")
         
-        Container(user_service, "User Service", "Java, Spring Boot", "Handles user authentication, JWT, and profile management.")
-        ContainerDb(user_db, "User Database", "PostgreSQL", "Stores user credentials and roles.")
+        Container(user_service, "User Service", "Spring Boot", "Handles user authentication, profile management, and access roles.")
+        ContainerDb(user_db, "User DB", "RDB SQL (AWS RDS)", "Stores user accounts and roles.")
         
-        Container(movie_service, "Movie Service", "Java, Spring Boot", "Manages the movie catalog, showtimes, and details.")
-        ContainerDb(movie_db, "Movie Database", "PostgreSQL", "Stores movie details and theater schedules.")
+        Container(movie_service, "Movie Service", "Spring Boot", "Manages movie details, genres, ratings, and showtimes.")
+        ContainerDb(movie_db, "Movie DB", "RDB SQL (AWS RDS)", "Stores the movie catalog and schedules.")
         
-        Container(booking_service, "Booking Service", "Java, Spring Boot", "Core service handling seat selection and ticket generation.")
-        ContainerDb(booking_db, "Booking Database", "PostgreSQL", "Stores reservation records and seat locks.")
+        Container(booking_service, "Booking Service", "Spring Boot", "Handles real-time seat selection, ticket booking, and reservations.")
+        ContainerDb(booking_db, "Booking DB", "RDB SQL (AWS RDS)", "Stores reservations and seat locks.")
         
-        Container(payment_service, "Payment Service", "Java, Spring Boot", "Handles transaction requests and payment validation.")
+        Container(payment_service, "Payment Service", "Spring Boot", "Processes payment transactions.")
         
-        Container(review_service, "Review Service", "Java, Spring Boot", "Handles user ratings and reviews for watched movies.")
-        ContainerDb(review_db, "Review Database", "PostgreSQL", "Stores user feedback and movie ratings.")
+        Container(review_service, "Review & Rating Service", "Spring Boot", "Allows users to rate and review movies after watching.")
+        ContainerDb(review_db, "Review DB", "RDB SQL (AWS RDS)", "Stores post-movie user feedback.")
 
-        ContainerQueue(kafka, "Message Broker", "Apache Kafka", "Handles asynchronous event-driven communication (e.g., BookingConfirmed events).")
+        ContainerQueue(kafka, "Message Broker", "Apache Kafka", "Event-driven communication for async tasks (e.g., notifications).")
     }
 
-    System_Ext(payment_gateway, "External Payment API", "Stripe / PayPal", "Processes payments.")
+    System_Ext(payment_gateway, "Third-Party Payment Gateway", "Stripe, PayPal", "External service processing financial transactions.")
+    System_Ext(notification_service, "External Notifications", "Email/SMS", "Sends booking confirmations and promotions.")
 
-    %% Relationships - Frontend to Backend
-    Rel(customer, web_app, "Interacts with", "HTTPS")
-    Rel(web_app, api_gateway, "Makes API calls to", "JSON/HTTPS")
-    
-    %% Relationships - Gateway to Microservices
-    Rel(api_gateway, user_service, "Routes user requests to", "REST/HTTPS")
-    Rel(api_gateway, movie_service, "Routes catalog requests to", "REST/HTTPS")
-    Rel(api_gateway, booking_service, "Routes booking requests to", "REST/HTTPS")
-    Rel(api_gateway, payment_service, "Routes checkout requests to", "REST/HTTPS")
-    Rel(api_gateway, review_service, "Routes review requests to", "REST/HTTPS")
+    %% User to Frontend to Gateway
+    Rel(user, frontend, "Interacts with UI")
+    Rel(frontend, api_gateway, "Makes REST API requests to")
 
-    %% Relationships - Microservices to Databases
-    Rel(user_service, user_db, "Reads/Writes", "JDBC")
-    Rel(movie_service, movie_db, "Reads/Writes", "JDBC")
-    Rel(booking_service, booking_db, "Reads/Writes", "JDBC")
-    Rel(review_service, review_db, "Reads/Writes", "JDBC")
+    %% Gateway to Microservices
+    Rel(api_gateway, user_service, "Routes /users traffic to")
+    Rel(api_gateway, movie_service, "Routes /movies traffic to")
+    Rel(api_gateway, booking_service, "Routes /bookings traffic to")
+    Rel(api_gateway, payment_service, "Routes /payments traffic to")
+    Rel(api_gateway, review_service, "Routes /reviews traffic to")
 
-    %% Relationships - Async Messaging (Kafka)
-    Rel(booking_service, kafka, "Publishes 'Booking Created' events to", "TCP")
-    Rel(payment_service, kafka, "Consumes events and publishes 'Payment Successful' to", "TCP")
+    %% Microservices to Databases (RDB SQL)
+    Rel(user_service, user_db, "Reads/Writes user data")
+    Rel(movie_service, movie_db, "Reads/Writes movie data")
+    Rel(booking_service, booking_db, "Reads/Writes booking data")
+    Rel(review_service, review_db, "Reads/Writes review data")
 
-    %% Relationships - External
-    Rel(payment_service, payment_gateway, "Processes payments using", "JSON/HTTPS")
-    
+    %% Kafka Interactions
+    Rel(booking_service, kafka, "Publishes booking events to")
+    Rel(kafka, notification_service, "Triggers notifications after booking")
+
+    %% External Interactions
+    Rel(payment_service, payment_gateway, "Integrates with to process payments")
+  
 
 ###  Implementation & Technology StackBackend Technologies:
 The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.  Frontend Implementation (React + Material UI):The frontend will consume the REST APIs exposed by the Spring Cloud Gateway. Below is a conceptual implementation of how the Movie Service and Booking Service data would be rendered using React and Material UI.
