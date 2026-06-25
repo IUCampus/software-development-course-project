@@ -10,6 +10,9 @@ Textual representation of the C4 Container Model:
 [Container] Message Broker (Apache Kafka): Handles async events.  
 [Container] Observability Stack: ELK (Elasticsearch, Logstash, Kibana) for centralized logging and Micrometer for telemetry.  
 
+<img width="1331" height="758" alt="image" src="https://github.com/user-attachments/assets/d4f749c7-cf61-4246-b4ba-ce2e4001317e" />
+
+
 ### Level 1: System Context Diagram
 C4Context
     title System Context Diagram for Movie Booking System
