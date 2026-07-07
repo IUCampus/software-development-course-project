@@ -5,16 +5,14 @@ services:
   - type: web
     name: backend-movie
     env: docker
-    # FIX 1: This MUST point to the backend folder
     rootDir: ./backend-movie
-    # FIX 2: Because we are already in the backend folder, the path is just Dockerfile
     dockerfilePath: Dockerfile
     plan: free
     envVars:
       - key: SERVER_PORT
-        value: "8082"
+        value: "8080"
       - key: PORT
-        value: "8082"
+        value: "8080"
       - key: SPRING_DATA_MONGODB_URI
         value: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
 
@@ -25,10 +23,11 @@ services:
     name: frontend-movie
     env: docker
     rootDir: ./frontend-movie
-    # FIX 2: Because we are already in the frontend folder, the path is just Dockerfile
     dockerfilePath: Dockerfile
     plan: free
     envVars:
-      # FIX 3: This CANNOT be localhost. You must replace this with your live backend URL once it is deployed.
+      # ⚠️ CRITICAL FIX: This CANNOT be localhost on Render!
+      # When your app is on the internet, localhost means the user's personal laptop.
+      # You MUST put the live web address of your backend here once Render creates it.
       - key: VITE_API_BASE_URL
-        value: "http://localhost:8082"
+        value: "http://localhost:8080"
