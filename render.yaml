@@ -1,0 +1,32 @@
+services:
+  # ----------------------------------------
+  # 1. BACKEND SERVICE
+  # ----------------------------------------
+  - type: web
+    name: backend-movie
+    env: docker
+    rootDir: ./frontend-movie
+    # FIX: Since rootDir is already backend-movie, the path is just Dockerfile
+    dockerfilePath: ./backend-movie/Dockerfile
+    plan: free
+    envVars:
+      - key: SERVER_PORT
+        value: "8082"
+      - key: PORT
+        value: "8080"
+      - key: SPRING_DATA_MONGODB_URI
+        value: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
+
+  # ----------------------------------------
+  # 2. FRONTEND SERVICE
+  # ----------------------------------------
+  - type: web
+    name: frontend-movie
+    env: docker
+    rootDir: ./frontend-movie
+    # FIX: Same here, change to just Dockerfile
+    dockerfilePath: ./frontend-movie/Dockerfile
+    plan: free
+    envVars:
+      - key: VITE_API_BASE_URL
+        value: "http://localhost:8082"

@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="80" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+        <option value="JSX File" />
+        <option value="Dockerfile" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="ROOT_SYNC" value="SYNC" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;IUCampus&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/IUCampus/software-development-course-project.git&quot;,
+    &quot;accountId&quot;: &quot;f30c511e-54ff-4868-be01-8eff909d236c&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0000502290716928" />
+      <entry key="MS500" value="1.2331104438832092" />
+      <entry key="S2" value="2.1667595902888674" />
+      <entry key="S5" value="2.6119659077127078" />
+      <entry key="S10" value="2.7961758299845685" />
+      <entry key="S30" value="3.469770411757553" />
+      <entry key="S60" value="6.550144087083364" />
+      <entry key="M2" value="13.835860746412932" />
+      <entry key="M5" value="27.50055287791365" />
+      <entry key="M10" value="37.24285318362491" />
+      <entry key="M15" value="43.80313420124603" />
+      <entry key="M30" value="65.50022818382872" />
+      <entry key="H1" value="106.45100191737244" />
+      <entry key="H2" value="180.63692892155015" />
+      <entry key="H4" value="318.31203839019275" />
+      <entry key="D1" value="710.3636103981627" />
+      <entry key="W1" value="975.5796764823506" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="4.582025919238712E-270" />
+      <entry key="S10" value="2.1405667285181043E-135" />
+      <entry key="S30" value="1.2887724894579373E-45" />
+      <entry key="S60" value="3.589947756525066E-23" />
+      <entry key="M2" value="5.991617274597123E-12" />
+      <entry key="M5" value="3.24352780828432E-5" />
+      <entry key="M10" value="0.0056951978089301815" />
+      <entry key="M15" value="0.03189132342086228" />
+      <entry key="M30" value="0.1785814195846315" />
+      <entry key="H1" value="0.42258894872515546" />
+      <entry key="H2" value="0.6500684184955718" />
+      <entry key="H4" value="0.8062685761971028" />
+      <entry key="D1" value="1.0495191293462482" />
+      <entry key="W1" value="1.6977860871123591" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.9659854513018142" />
+      <entry key="MS500" value="1.2250954020778528" />
+      <entry key="S2" value="2.1636203516698544" />
+      <entry key="S5" value="2.6104925098413365" />
+      <entry key="S10" value="2.795383627733216" />
+      <entry key="S30" value="3.4667968856754032" />
+      <entry key="S60" value="6.541734562751159" />
+      <entry key="M2" value="13.823531074325716" />
+      <entry key="M5" value="27.489217675451464" />
+      <entry key="M10" value="37.24049778800836" />
+      <entry key="M15" value="43.82879887285095" />
+      <entry key="M30" value="65.6748764317953" />
+      <entry key="H1" value="106.87115599974281" />
+      <entry key="H2" value="181.2855333228746" />
+      <entry key="H4" value="319.11743031029425" />
+      <entry key="D1" value="711.4129214346162" />
+      <entry key="W1" value="977.2774197962859" />
+    </decayedShown>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3FTt4YTZ2laC0EqXJc0BoT1lD5J" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.BackendMovieApplicationTests.executor": "Run",
+    "Maven.backend-movie [clean].executor": "Run",
+    "Maven.backend-movie [compile].executor": "Run",
+    "Maven.backend-movie [test].executor": "Run",
+    "Maven.backend-movie [validate].executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "Spring Boot.BackendMovieApplication.executor": "Run",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Besitzer/OneDrive/Desktop/frontend-movie-",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "to.speed.mode.migration.done": "true",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.7\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mongo"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\frontend-movie" />
+      <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\backend-movie\src\main\java\com\frankapp\backendmovie" />
+      <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\backend" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\frontend-movie" />
+      <recent name="C:\Users\Besitzer\Downloads\project software developemnt" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.BackendMovieApplication">
+    <configuration name="BackendMovieApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend-movie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.frankapp.backendmovie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.frankapp.backendmovie" />
+      <option name="MAIN_CLASS_NAME" value="com.frankapp.backendmovie.BackendMovieApplicationTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendMovieApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="backend-movie" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.frankapp.backendmovie.BackendMovieApplication" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.frankapp.backendmovie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.BackendMovieApplication" />
+        <item itemvalue="JUnit.BackendMovieApplicationTests" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-37e91769500f-intellij.indexing.shared.core-IU-261.25134.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-IU-261.25134.95" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="" />
+      <created>1782661806656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1782661806656</updated>
+      <workItem from="1782661809472" duration="2167000" />
+      <workItem from="1782664694820" duration="1543000" />
+      <workItem from="1782666557645" duration="3349000" />
+      <workItem from="1782831894208" duration="18506000" />
+      <workItem from="1783232940326" duration="2986000" />
+      <workItem from="1783239987623" duration="2648000" />
+      <workItem from="1783244194833" duration="6433000" />
+      <workItem from="1783262633172" duration="315000" />
+      <workItem from="1783262973076" duration="5725000" />
+      <workItem from="1783338639138" duration="4182000" />
+      <workItem from="1783343440987" duration="423000" />
+      <workItem from="1783344339906" duration="1268000" />
+      <workItem from="1783352937896" duration="48000" />
+      <workItem from="1783353099534" duration="435000" />
+      <workItem from="1783437722995" duration="342000" />
+      <workItem from="1783438454105" duration="40000" />
+    </task>
+    <task id="LOCAL-00001" summary="Second Commit Message:">
+      <option name="closed" value="true" />
+      <created>1783262911543</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783262911543</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783283782791</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783283782791</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783339492545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1783339492545</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783339505487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783339505487</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783339554521</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783339554521</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783339808164</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1783339808164</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783340193916</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1783340193916</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783341519348</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1783341519348</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783341615251</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1783341615251</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783341727818</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1783341727818</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783341822721</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1783341822721</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783342581326</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1783342581326</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Second Commit Message:" />
+    <MESSAGE value="Second Commit Message" />
+    <option name="LAST_COMMIT_MESSAGE" value="Second Commit Message" />
+  </component>
+</project>

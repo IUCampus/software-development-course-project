@@ -1,0 +1,61 @@
+
+server:
+  port: 8082
+
+spring:
+  application:
+    name: backend-movie
+  cloud:
+    gateway:
+      global-cors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:5173"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+#      routes:
+#        - id: user-service
+#          uri: lb://user-service # Assumes Eureka Service Discovery
+#          predicates:
+#            - Path=/api/auth/**, /api/users/**
+#        - id: movie-service
+#          uri: lb://movie-service
+#          predicates:
+#            - Path=/api/movies/**
+#        - id: booking-service
+#          uri: lb://booking-service
+#          predicates:
+#            - Path=/api/bookings/**
+#        - id: payment-service
+#          uri: lb://payment-service
+#          predicates:
+#            - Path=/api/payments/**
+#        - id: review-service
+#          uri: lb://review-service
+#          predicates:
+#            - Path=/api/reviews/**
+  kafka:
+    bootstrap-servers: localhost:9092
+    listener:
+      auto-startup: false
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+  mongodb:
+    uri: mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0
+  data:
+    mongodb:
+      uri: mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0
+      repositories:
+        type: auto
+  main:
+    allow-bean-definition-overriding: true
+
+eureka:
+  client:
+    enabled: false
+    service-url:
+      defaultZone: http://localhost:8761/eureka/

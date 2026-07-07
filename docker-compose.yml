@@ -1,0 +1,32 @@
+services:
+  backend:
+    build:
+      context: ./backend-movie
+      dockerfile: Dockerfile
+    container_name: movie-backend
+    restart: unless-stopped
+    environment:
+      # Use your MongoDB Atlas connection string
+      SPRING_DATA_MONGODB_URI: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
+
+      # If your app reads a separate DB name, you can also set (adjust if needed):
+      # SPRING_DATA_MONGODB_DATABASE: movieMicroservice
+
+      # Standard Spring Boot port (change if your app uses another)
+      SERVER_PORT: 8082
+    ports:
+      - "8082:8082"
+
+  frontend:
+    build:
+      context: ./frontend-movie
+      dockerfile: Dockerfile
+    container_name: movie-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      # Vite uses VITE_* env vars at build time
+      VITE_API_BASE_URL: "http://backend:8082"
+    ports:
+      - "5173:5173"
