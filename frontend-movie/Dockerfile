@@ -1,16 +1,18 @@
-FROM node:22-alpine
-
+# 1. Build stage
+FROM node:18-alpine AS build
 WORKDIR /app
-
-# Install dependencies
-COPY package.json package-lock.json ./
-RUN npm ci
-
-# Copy the rest of the frontend code
+COPY package*.json ./
+RUN npm install
 COPY . .
+# This uses the ARG passed by Render to bake the URL into the frontend
+ARG VITE_API_BASE_URL
+ENV VITE_API_BASE_URL=$VITE_API_BASE_URL
+RUN npm run build
 
-# Vite default dev port (keep in sync with docker-compose)
-EXPOSE 5173
-
-# Run Vite dev server, accessible from outside the container
-CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0", "--port", "5173"]
+# 2. Serve stage using a lightweight static server
+FROM node:18-alpine
+WORKDIR /app
+RUN npm install -g serve
+COPY --from=build /app/dist ./dist
+# Render provides the $PORT variable automatically
+CMD serve -s dist -l tcp://0.0.0.0:$PORT
