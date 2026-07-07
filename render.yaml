@@ -2,7 +2,7 @@
   # ----------------------------------------
   # 1. BACKEND SERVICE
   # ----------------------------------------
-  - type: web
+  #- type: web
     name: backend-movie
     env: docker
     rootDir: ./backend-movie
