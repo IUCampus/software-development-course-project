@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend-movie/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend-movie/Dockerfile" afterDir="false" />
-    </list>
+    <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -247,7 +243,7 @@
       <workItem from="1783352937896" duration="48000" />
       <workItem from="1783353099534" duration="435000" />
       <workItem from="1783437722995" duration="342000" />
-      <workItem from="1783438454105" duration="1105000" />
+      <workItem from="1783438454105" duration="1567000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit Message:">
       <option name="closed" value="true" />
