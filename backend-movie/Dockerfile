@@ -9,6 +9,9 @@ RUN mvn clean package -DskipTests
 FROM eclipse-temurin:17-jre-alpine
 WORKDIR /app
 COPY --from=build /app/target/*.jar app.jar
-# Render will assign a PORT environment variable, Spring Boot uses SERVER_PORT.
-ENV SERVER_PORT=${PORT}
-ENTRYPOINT ["java", "-jar", "app.jar"]
+
+# Expose a default port (optional, but good practice for local testing)
+EXPOSE 8080
+
+# Use 'sh -c' to ensure the runtime $PORT environment variable is passed to Spring Boot
+ENTRYPOINT ["sh", "-c", "java -Dserver.port=${PORT:-8080} -jar app.jar"]
