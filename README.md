@@ -27,50 +27,8 @@ Textual representation of the C4 Container Model:
 ### Implementation & Technology StackBackend Technologies:
 The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.  Frontend Implementation (React + Material UI):The frontend will consume the REST APIs exposed by the Spring Cloud Gateway. Below is a conceptual implementation of how the Movie Service and Booking Service data would be rendered using React and Material UI.
 
-import React, { useState, useEffect } from 'react';
-import { Card, CardContent, CardMedia, Typography, Button, Grid, Container } from '@mui/material';
-import axios from 'axios';
+<img width="930" height="618" alt="image" src="https://github.com/user-attachments/assets/f743296f-7db9-4099-ba86-3eb665f083d4" />
 
-// Conceptual React Component for displaying movies
-export default function MovieCatalog() {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    // Fetching data from the API Gateway which routes to the Movie Service
-    axios.get('https://api.yourdomain.com/movies')
-      .then(response => setMovies(response.data))
-      .catch(error => console.error("Error fetching movies", error));
-  }, []);
-
-  return (
-    <Container sx={{ py: 8 }} maxWidth="md">
-      <Grid container spacing={4}>
-        {movies.map((movie) => (
-          <Grid item key={movie.id} xs={12} sm={6} md={4}>
-            <Card sx={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
-              <CardMedia
-                component="img"
-                image={movie.posterUrl}
-                alt={movie.title}
-              />
-              <CardContent sx={{ flexGrow: 1 }}>
-                <Typography gutterBottom variant="h5" component="h2">
-                  {movie.title}
-                </Typography>
-                <Typography>
-                  {movie.description}
-                </Typography>
-              </CardContent>
-              <Button size="small" variant="contained" color="primary" sx={{ m: 2 }}>
-                Book Tickets
-              </Button>
-            </Card>
-          </Grid>
-        ))}
-      </Grid>
-    </Container>
-  );
-}
 
 ### Testing & Documentation Strategy
 
