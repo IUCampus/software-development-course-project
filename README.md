@@ -27,8 +27,7 @@ Textual representation of the C4 Container Model:
 ### Implementation & Technology StackBackend Technologies:
 The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.  Frontend Implementation (React + Material UI):The frontend will consume the REST APIs exposed by the Spring Cloud Gateway. Below is a conceptual implementation of how the Movie Service and Booking Service data would be rendered using React and Material UI.
 
-<img width="930" height="618" alt="image" src="https://github.com/user-attachments/assets/f743296f-7db9-4099-ba86-3eb665f083d4" />
-
+<img width="1030" height="847" alt="image" src="https://github.com/user-attachments/assets/33da1984-2c35-486f-a23f-d89bb6a8edcd" />
 
 ### Testing & Documentation Strategy
 
