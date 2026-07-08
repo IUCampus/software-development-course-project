@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message">
+      <change afterPath="$PROJECT_DIR$/backend-movie/src/test/java/com/frankapp/backendmovie/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +14,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="80" />
+    <option name="cachedIndexableFilesCount" value="81" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -127,6 +127,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.BackendMovieApplicationTests.contextLoads.executor": "Run",
     "JUnit.BackendMovieApplicationTests.executor": "Run",
     "Maven.backend-movie [clean].executor": "Run",
     "Maven.backend-movie [compile].executor": "Run",
@@ -179,8 +180,11 @@
       <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\frontend-movie" />
       <recent name="C:\Users\Besitzer\Downloads\project software developemnt" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.frankapp.backendmovie.entity" />
+    </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.BackendMovieApplication">
+  <component name="RunManager" selected="JUnit.BackendMovieApplicationTests.contextLoads">
     <configuration name="BackendMovieApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="backend-movie" />
       <extension name="coverage">
@@ -192,6 +196,22 @@
       <option name="PACKAGE_NAME" value="com.frankapp.backendmovie" />
       <option name="MAIN_CLASS_NAME" value="com.frankapp.backendmovie.BackendMovieApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BackendMovieApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="backend-movie" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.frankapp.backendmovie.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.frankapp.backendmovie" />
+      <option name="MAIN_CLASS_NAME" value="com.frankapp.backendmovie.BackendMovieApplicationTests" />
+      <option name="METHOD_NAME" value="contextLoads" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -211,6 +231,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.BackendMovieApplicationTests.contextLoads" />
         <item itemvalue="Spring Boot.BackendMovieApplication" />
         <item itemvalue="JUnit.BackendMovieApplicationTests" />
       </list>
@@ -247,6 +268,7 @@
       <workItem from="1783353099534" duration="435000" />
       <workItem from="1783437722995" duration="342000" />
       <workItem from="1783438454105" duration="2912000" />
+      <workItem from="1783519960904" duration="1517000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit Message:">
       <option name="closed" value="true" />
