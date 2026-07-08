@@ -33,6 +33,8 @@ The backend utilizes Java with Spring Boot to package services independently. Da
 
 Unit Testing:
 
+<img width="1562" height="736" alt="image" src="https://github.com/user-attachments/assets/48de2d31-b3e5-4d01-b23c-cc0878299cb8" />
+
 Backend: Use JUnit 5 and Mockito to test isolated business logic in Spring Boot (e.g., verifying that the Booking Service correctly calculates the total price).
 
 Frontend: Use Jest and React Testing Library to ensure Material UI components render correctly and state changes (like selecting a seat) work as expected.
