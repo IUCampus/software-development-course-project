@@ -1,33 +1,32 @@
 services:
-  # ----------------------------------------
-  # 1. BACKEND SERVICE
-  # ----------------------------------------
-  - type: web
-    name: backend-movie
-    env: docker
-    rootDir: ./backend-movie
-    dockerfilePath: Dockerfile
-    plan: free
-    envVars:
-      - key: SERVER_PORT
-        value: "8080"
-      - key: PORT
-        value: "8080"
-      - key: SPRING_DATA_MONGODB_URI
-        value: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
+  backend:
+    build:
+      context: ./backend-movie
+      dockerfile: Dockerfile
+    container_name: movie-backend
+    restart: unless-stopped
+    environment:
+      # Use your MongoDB Atlas connection string
+      SPRING_DATA_MONGODB_URI: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
 
-  # ----------------------------------------
-  # 2. FRONTEND SERVICE
-  # ----------------------------------------
-  - type: web
-    name: frontend-movie
-    env: docker
-    rootDir: ./frontend-movie
-    dockerfilePath: Dockerfile
-    plan: free
-    envVars:
-      # ⚠️ CRITICAL FIX: This CANNOT be localhost on Render!
-      # When your app is on the internet, localhost means the user's personal laptop.
-      # You MUST put the live web address of your backend here once Render creates it.
-      - key: VITE_API_BASE_URL
-        value: "http://localhost:8080"
+      # If your app reads a separate DB name, you can also set (adjust if needed):
+      # SPRING_DATA_MONGODB_DATABASE: movieMicroservice
+
+      # Standard Spring Boot port (change if your app uses another)
+      SERVER_PORT: 8082
+    ports:
+      - "8082:8082"
+
+  frontend:
+    build:
+      context: ./frontend-movie
+      dockerfile: Dockerfile
+    container_name: movie-frontend
+    restart: unless-stopped
+    depends_on:
+      - backend
+    environment:
+      # Vite uses VITE_* env vars at build time
+      VITE_API_BASE_URL: "http://backend:8082"
+    ports:
+      - "5173:5173"

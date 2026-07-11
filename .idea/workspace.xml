@@ -7,6 +7,7 @@
     <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message">
       <change afterPath="$PROJECT_DIR$/backend-movie/src/test/java/com/frankapp/backendmovie/entity/Booking.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,7 +15,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="81" />
+    <option name="cachedIndexableFilesCount" value="84" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -35,7 +36,6 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="ROOT_SYNC" value="SYNC" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -64,56 +64,56 @@
       <entry key="S2" value="1.0" />
       <entry key="S5" value="1.0" />
       <entry key="S10" value="1.0" />
-      <entry key="S30" value="1.0000003847918537" />
-      <entry key="S60" value="1.0010657616239864" />
-      <entry key="M2" value="1.0564761985461288" />
-      <entry key="M5" value="1.8042537184206866" />
-      <entry key="M10" value="5.784844123874463" />
-      <entry key="M15" value="12.20763892253585" />
-      <entry key="M30" value="35.162252938412564" />
-      <entry key="H1" value="79.55645252817799" />
-      <entry key="H2" value="158.02533727532776" />
-      <entry key="H4" value="299.4370707221046" />
-      <entry key="D1" value="713.0738584370799" />
-      <entry key="W1" value="988.9641827446362" />
+      <entry key="S30" value="1.0" />
+      <entry key="S60" value="1.0" />
+      <entry key="M2" value="1.0" />
+      <entry key="M5" value="1.0" />
+      <entry key="M10" value="1.0" />
+      <entry key="M15" value="1.0" />
+      <entry key="M30" value="1.0000000000035179" />
+      <entry key="H1" value="1.0000251251801195" />
+      <entry key="H2" value="1.0888118043348687" />
+      <entry key="H4" value="8.099956520162394" />
+      <entry key="D1" value="383.5252970903298" />
+      <entry key="W1" value="906.5101919924723" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
       <entry key="MS500" value="0.0" />
       <entry key="S2" value="0.0" />
       <entry key="S5" value="0.0" />
-      <entry key="S10" value="5.366418069964754E-205" />
-      <entry key="S30" value="8.126337109156504E-69" />
-      <entry key="S60" value="9.014619852859295E-35" />
-      <entry key="M2" value="9.494535192867156E-18" />
-      <entry key="M5" value="1.5523494189476444E-7" />
-      <entry key="M10" value="3.939986572245699E-4" />
-      <entry key="M15" value="0.00537439803629405" />
-      <entry key="M30" value="0.07331028601972606" />
-      <entry key="H1" value="0.27075872288760383" />
-      <entry key="H2" value="0.5203448115314672" />
-      <entry key="H4" value="0.721349631297046" />
-      <entry key="D1" value="1.030231217521179" />
-      <entry key="W1" value="1.6932931937847528" />
+      <entry key="S10" value="0.0" />
+      <entry key="S30" value="0.0" />
+      <entry key="S60" value="0.0" />
+      <entry key="M2" value="6.276712857249006E-213" />
+      <entry key="M5" value="1.315506215923527E-85" />
+      <entry key="M10" value="3.626990785656236E-43" />
+      <entry key="M15" value="5.085858834293452E-29" />
+      <entry key="M30" value="7.13152075948282E-15" />
+      <entry key="H1" value="8.444833189283752E-8" />
+      <entry key="H2" value="2.905999516394886E-4" />
+      <entry key="H4" value="0.017047000298357987" />
+      <entry key="D1" value="0.5518889914620422" />
+      <entry key="W1" value="1.5488381007431617" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.7269862586601552" />
-      <entry key="MS500" value="0.9382211965006712" />
-      <entry key="S2" value="0.9841840220338002" />
-      <entry key="S5" value="0.99364333555883" />
-      <entry key="S10" value="0.9968166007640673" />
-      <entry key="S30" value="0.9989381235592062" />
-      <entry key="S60" value="1.0005342658832934" />
-      <entry key="M2" value="1.0562043499627936" />
-      <entry key="M5" value="1.803957197553521" />
-      <entry key="M10" value="5.783822950794117" />
-      <entry key="M15" value="12.210651415224541" />
-      <entry key="M30" value="35.23239955128655" />
-      <entry key="H1" value="79.82445458031184" />
-      <entry key="H2" value="158.54376588817598" />
-      <entry key="H4" value="300.1572208531706" />
-      <entry key="D1" value="714.1038095813577" />
-      <entry key="W1" value="990.6574222784587" />
+      <entry key="MS100" value="0.6643429070482558" />
+      <entry key="MS500" value="0.921464186198704" />
+      <entry key="S2" value="0.9797597976233297" />
+      <entry key="S5" value="0.9918542213993645" />
+      <entry key="S10" value="0.9959187825316703" />
+      <entry key="S30" value="0.9986377392655886" />
+      <entry key="S60" value="0.9993186375053698" />
+      <entry key="M2" value="0.9996592607010499" />
+      <entry key="M5" value="0.9998636903454952" />
+      <entry key="M10" value="0.999931842850049" />
+      <entry key="M15" value="0.9999545613838619" />
+      <entry key="M30" value="0.9999772804373662" />
+      <entry key="H1" value="1.000013848907605" />
+      <entry key="H2" value="1.0890956421526818" />
+      <entry key="H4" value="8.116972078978437" />
+      <entry key="D1" value="384.0770346121527" />
+      <entry key="W1" value="908.0589807085537" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -125,51 +125,51 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.BackendMovieApplicationTests.contextLoads.executor": "Run",
-    "JUnit.BackendMovieApplicationTests.executor": "Run",
-    "Maven.backend-movie [clean].executor": "Run",
-    "Maven.backend-movie [compile].executor": "Run",
-    "Maven.backend-movie [test].executor": "Run",
-    "Maven.backend-movie [validate].executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "Spring Boot.BackendMovieApplication.executor": "Run",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Besitzer/OneDrive/Desktop/frontend-movie-",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "to.speed.mode.migration.done": "true",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.7\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.BackendMovieApplicationTests.contextLoads.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.BackendMovieApplicationTests.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.backend-movie [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.backend-movie [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.backend-movie [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.backend-movie [validate].executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;Spring Boot.BackendMovieApplication.executor&quot;: &quot;Run&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Besitzer/OneDrive/Desktop/frontend-movie-&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\IntelliJ IDEA 2024.3.7\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mongo"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mongo&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Besitzer\Downloads\project software developemnt\frontend-movie-\frontend-movie" />
@@ -268,7 +268,8 @@
       <workItem from="1783353099534" duration="435000" />
       <workItem from="1783437722995" duration="342000" />
       <workItem from="1783438454105" duration="2912000" />
-      <workItem from="1783519960904" duration="1517000" />
+      <workItem from="1783519960904" duration="2326000" />
+      <workItem from="1783752002876" duration="381000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit Message:">
       <option name="closed" value="true" />
@@ -374,7 +375,23 @@
       <option name="project" value="LOCAL" />
       <updated>1783440522111</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783522290253</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1783522290253</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1783522366161</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1783522366161</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
