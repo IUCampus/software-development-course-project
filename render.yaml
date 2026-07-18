@@ -1,5 +1,14 @@
-# ⚠️ THIS IS NOT A DOCKERFILE. This is a Render Blueprint configuration file.
-# It tells Render how to deploy your services using the Dockerfiles in their subdirectories.
+# 🛑 STOP! THIS IS NOT A DOCKERFILE!
+# 🛑 THIS IS A RENDER BLUEPRINT CONFIGURATION FILE.
+#
+# To deploy to Render:
+# 1. Use the "Blueprints" menu in the Render dashboard.
+# 2. Render will automatically use THIS file to find the REAL Dockerfiles in:
+#    - ./backend-movie/Dockerfile
+#    - ./frontend-movie/Dockerfile
+#
+# DO NOT point Render's "Dockerfile Path" to this file.
+# -------------------------------------------------------------------------
 services:
   # ----------------------------------------
   # 1. BACKEND SERVICE

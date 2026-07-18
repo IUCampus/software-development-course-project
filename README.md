@@ -45,8 +45,13 @@ docker build -t backend-movie -f backend-movie/Dockerfile ./backend-movie
 docker build -t frontend-movie -f frontend-movie/Dockerfile ./frontend-movie
 ```
 
-#### Render Deployment:
-Use the provided `render.yaml` to deploy as a Blueprint on Render. This will automatically set up both the frontend and backend with the correct configuration.
+#### Render Deployment (Blueprint):
+1. Go to the **Render Dashboard**.
+2. Click **New** -> **Blueprint**.
+3. Connect this GitHub repository.
+4. Render will use the `render.yaml` file to automatically set up both the frontend and backend.
+
+**⚠️ IMPORTANT:** Do NOT create a "Web Service" manually and point it to the root of the repo. Use the **Blueprint** option. If you must create a Web Service manually, ensure you set the **Root Directory** to `backend-movie` or `frontend-movie` and the **Dockerfile Path** to `Dockerfile`.
 
 <img width="1030" height="847" alt="image" src="https://github.com/user-attachments/assets/33da1984-2c35-486f-a23f-d89bb6a8edcd" />
 
