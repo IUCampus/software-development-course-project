@@ -1,3 +1,5 @@
+# ⚠️ THIS IS NOT A DOCKERFILE. This is a Docker Compose configuration file.
+# To build individual services, use their respective Dockerfiles in backend-movie/ or frontend-movie/.
 services:
   backend:
     build:

@@ -1,4 +1,6 @@
-# This is a monorepo root Dockerfile.
+# 🛑 STOP! This is NOT the Dockerfile you are looking for.
+# This is a monorepo root. You should NOT build from this root unless you want this error message.
+#
 # To build individual services, please use their respective Dockerfiles:
 #
 # Backend:
@@ -11,4 +13,4 @@
 #   docker-compose up --build
 
 FROM alpine
-RUN echo "Please build from the service subdirectories (backend-movie/ or frontend-movie/) or use docker-compose up." && exit 1
+RUN echo "ERROR: You are trying to build from the root directory. Please build from backend-movie/ or frontend-movie/ subdirectories." && exit 1
