@@ -9,10 +9,8 @@ services:
     dockerfilePath: Dockerfile
     plan: free
     envVars:
-      - key: SERVER_PORT
-        value: "8080"
       - key: PORT
-        value: "8080"
+        value: "8082"
       - key: SPRING_DATA_MONGODB_URI
         value: "mongodb+srv://movie_microservices:microservices@cluster0.ttgcs.mongodb.net/movieMicroservice?appName=Cluster0"
 
@@ -26,8 +24,8 @@ services:
     dockerfilePath: Dockerfile
     plan: free
     envVars:
-      # ⚠️ CRITICAL FIX: This CANNOT be localhost on Render!
-      # When your app is on the internet, localhost means the user's personal laptop.
+      # ⚠️ CRITICAL: VITE_API_BASE_URL must be passed as a Build Argument to be "baked in"
+      # at build time. Render handles this via 'envVars' in 'env: docker' services.
       # You MUST put the live web address of your backend here once Render creates it.
       - key: VITE_API_BASE_URL
-        value: "http://localhost:8080"
+        value: "https://backend-movie.onrender.com" # Example: Replace with your actual backend URL

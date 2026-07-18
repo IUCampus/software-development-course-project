@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="af11e1e9-3b4a-4668-978e-bc4810b16000" name="Changes" comment="Second Commit Message">
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_07_2026_16_52_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_08_07_2026_16_52__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-movie/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend-movie/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend-movie/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend-movie/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/render.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/render.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -270,7 +270,7 @@
       <workItem from="1783438454105" duration="2912000" />
       <workItem from="1783519960904" duration="2326000" />
       <workItem from="1783752002876" duration="381000" />
-      <workItem from="1784374597708" duration="338000" />
+      <workItem from="1784374597708" duration="841000" />
     </task>
     <task id="LOCAL-00001" summary="Second Commit Message:">
       <option name="closed" value="true" />
@@ -392,7 +392,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783522366161</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Second Commit Message">
+      <option name="closed" value="true" />
+      <created>1784374956661</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1784374956661</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
