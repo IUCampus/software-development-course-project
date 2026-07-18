@@ -24,8 +24,29 @@ Textual representation of the C4 Container Model:
 
 <img width="1187" height="727" alt="image" src="https://github.com/user-attachments/assets/758213c1-aa3e-4799-8d38-ac16a4ae0ae8" />
 
-### Implementation & Technology StackBackend Technologies:
-The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.  Frontend Implementation (React + Material UI):The frontend will consume the REST APIs exposed by the Spring Cloud Gateway. Below is a conceptual implementation of how the Movie Service and Booking Service data would be rendered using React and Material UI.
+### Implementation & Technology Stack
+#### Backend Technologies:
+The backend utilizes Java with Spring Boot to package services independently. Data is stored in relational SQL databases (PostgreSQL/MySQL via AWS RDS). The entire infrastructure is containerized using Docker and orchestrated via Kubernetes on AWS EKS.
+
+#### Docker & Deployment:
+This is a monorepo. To build and run the services locally using Docker:
+
+**Option 1: Docker Compose (Recommended)**
+```bash
+docker-compose up --build
+```
+
+**Option 2: Individual Service Builds**
+```bash
+# Backend
+docker build -t backend-movie -f backend-movie/Dockerfile ./backend-movie
+
+# Frontend
+docker build -t frontend-movie -f frontend-movie/Dockerfile ./frontend-movie
+```
+
+#### Render Deployment:
+Use the provided `render.yaml` to deploy as a Blueprint on Render. This will automatically set up both the frontend and backend with the correct configuration.
 
 <img width="1030" height="847" alt="image" src="https://github.com/user-attachments/assets/33da1984-2c35-486f-a23f-d89bb6a8edcd" />
 
